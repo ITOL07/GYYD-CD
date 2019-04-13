@@ -1,0 +1,24 @@
+<!--pages/detail/message/message.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <view class="top">
+      <text>课程提醒</text>
+      <text>系统通知</text>
+    </view>
+    <view class="bottom">
+      <block wx:for="{{messageData}}" wx:key="this">
+        <view class="list">
+          <view class="list_top">
+            <text class="text1">{{item.title}}</text>
+            <text class="text2">{{item.time}}</text>
+          </view>
+          <view class="list_bottom">
+            <text>课程：{{item.course}}</text>
+            <text>{{item.vip}}</text>
+            <text>完成时间：{{item.completetime}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,74 @@
+<!--pages/user/privatedetail/privatedetail.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <view class="private_header">
+      <view class="header_left">
+        <image src="../../../static/images/user/header.png"></image>
+      </view>
+      <view class="header_right"> 
+        <view class="header_right_top">
+          <view class="name">
+            <text class="name_text1">杨宋</text>
+            <text class="name_text2">18918918918</text>
+          </view>
+          <text>共在本店授课283节</text>
+        </view>
+        <view class="header_right_bottom"> 
+          <view class="certificate" bindtap="certificateClick">
+            <image src="../../../static/images/user/certificate.png"></image>
+            <text>证书(4)</text>
+          </view>
+          <view class="case" bindtap="caseClick">
+            <image src="../../../static/images/user/case.png"></image>
+            <text>案例(6)</text>
+          </view>
+          <view class="photo" bindtap="photoClick">
+            <image src="../../../static/images/user/photo.png"></image>
+            <text>相册(20)</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="private_middle">
+      <text class="title">教练简介</text>
+      <text class="introduce">身材一直便瘦身体也不是很好，之后决定开始健身就去费恩莱斯国际健身学院学习教练行业，从110多斤的瘦猴增肌到168斤</text>
+    </view>
+    <view class="private_middle">
+      <text class="title">擅长</text>
+      <text class="introduce">体态改善，男性增肌，女性塑形及产后恢复，拉伸放松提高身体柔韧性，体能提升</text>
+    </view>
+    <view class="course">
+      <view class="private_head">
+        <text>教授课程</text>
+      </view>
+      <view class="listall">
+        <view class="private_list" wx:for="{{courseData}}" wx:key="this">
+          <view class="list_item">
+            <image src="{{item.imgurl}}"></image>
+            <text class="text1">{{item.title}}</text>
+            <text class="text2">{{item.introduce}}</text>
+            <view class="buy">
+              <text>￥{{item.price}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <text>历史课程</text>
+      <view class="list">
+        <block wx:for="{{incomeDate}}" wx:key="this">
+          <view class="list_items">
+            <view class="list_items_left"><view class="lists"></view></view>
+            <view class="list_items_middle">
+              <text>{{item.name}}</text>
+              <text>{{item.date}}</text>
+              <text>{{item.course}}</text>
+            </view>
+            <text>{{item.price}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

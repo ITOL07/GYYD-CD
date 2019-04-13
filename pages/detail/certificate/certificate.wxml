@@ -1,0 +1,10 @@
+<!--pages/detail/certificate/certificate.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="../../../static/images/detail/certificate.png"></image>
+  </view>
+  <view class="bottom">
+    <image src="../../../static/images/littleicon/left.png" bindtap="leftbtn"></image>
+    <image src="../../../static/images/littleicon/right.png" bindtap="rightbtn"></image>
+  </view>
+</view>

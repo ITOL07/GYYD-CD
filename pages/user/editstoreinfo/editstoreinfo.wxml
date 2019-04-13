@@ -1,0 +1,68 @@
+<!--pages/user/editstoreinfo/editstoreinfo.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <view class="top">
+      <text class="edit" bindtap="finishClick">完成</text>
+    </view>
+    <view class="list list_top">
+      <text>门店头像</text>
+      <image src="../../../static/images/user/store.png" class="title_image"></image>
+    </view>
+    <view class="list">
+      <text>门店名称</text> 
+      <text class="content">腾讯众创空间空间店</text>
+    </view>
+    <view class="list">
+      <text>门店地址</text>
+      <text class="content">北京市昌平区回龙观东大街338号腾讯众创空间三层</text>
+      <map
+        id="map"
+        longitude="113.324520"
+        latitude="23.099994"
+        scale="14"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        show-location
+        style="width: 100%; height: 260rpx;"
+      ></map>
+    </view>
+    <view class="list">
+      <text>门店面积</text>
+      <view class="storearea">
+        <text class="content">单行输入</text>
+        <text>m2</text>
+      </view>
+    </view>
+     <view class="list">
+      <text>营业时间</text>
+      <view class="storearea">
+        <text class="content">hh:mm</text>
+        <text class="content">hh:mm</text>
+      </view>
+    </view>
+    <view class="list">
+      <view class="sheshi">
+        <text>基础设施</text>
+        <image src="../../../static/images/user/+.png" bindtap="addClick"></image>
+      </view>
+      <view class="sheshiitem">
+        <text>充电宝</text>
+        <text>洗浴</text>
+        <text>WIFI</text>
+        <text>停车场</text>
+      </view>
+    </view>
+    <view class="list">
+      <text>门店图片</text>
+      <view class="imgall">
+        <block wx:for="{{storeImg}}" wx:key="this">
+          <image src="{{item.imgurl}}"></image>
+        </block>
+      </view>
+      <image src="../../../static/images/user/add.png" class="addimage" bindtap="uploadImage"></image>
+    </view>
+    <modal hidden="{{actionHidden}}" title="添加基础设施" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+      <input type="text" placeholder="单行输入" bindinput="inputValue"></input>
+    </modal>
+  </scroll-view>
+</view>

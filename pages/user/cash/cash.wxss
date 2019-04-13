@@ -1,0 +1,91 @@
+/* pages/user/cash/cash.wxss */
+.container{
+  background:#FAFAFA;
+}
+.list{
+  width:100%;
+  height:auto;
+  display:flex; 
+  flex-direction:column;
+  justify-content:center;
+}
+.list text:nth-child(1){
+  font-size:26rpx;
+  color:#999999;
+  text-align:center;
+  margin-top:30rpx;
+}
+.list text:nth-child(2){
+  font-size:60rpx;
+  color:#333333;
+  text-align:center;
+  margin-top:20rpx;
+}
+.middle{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:90%;
+  height:259rpx;
+  margin:40rpx auto;
+  background:#FFFFFF;
+}
+.middle text{
+  width:100%;
+  height:80rpx;
+  line-height:110rpx;
+  font-size:30rpx;
+  color:#292A2E;
+}
+.middle_item{
+  width:90%;
+  height:179rpx;
+  line-height:149rpx;
+  margin:0 auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+}
+.middle_item input{
+  width:60%;
+  height:75rpx;
+  background:#FAFAFA;
+  margin-left:5%;
+  font-size:30rpx;
+  color:#999999;
+}
+.middle_item button{
+  width:25%;
+  height:75rpx;
+  line-height:75rpx;
+  font-size:22rpx;
+  color:#EE6F2D;
+  margin-left:5%;
+  border:2rpx solid #EE6F2D;
+}
+.list text:nth-child(4){
+  font-size:22rpx;
+  color:#999999;
+  margin-left:10%;
+}
+.num{
+  width:70%;
+  height:84rpx;
+  margin:0 auto;
+  border-radius:30rpx;
+  background:#EE6F2D;
+  color:#FFFFFF;
+  text-align:center;
+  margin-top:100rpx;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+.list text:nth-child(6){
+  font-size:32rpx;
+  color:#EE6F2D;
+  text-align:center;
+  margin-top:20rpx;
+  text-decoration: underline;
+}

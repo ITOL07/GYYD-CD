@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <!-- 轮播图 --> 
+    <view class="index_head">
+      <swiper indicator-dots="{{index_dots}}" indicator-color="{{index_color}}" indicator-active-color="{{index_activeColor}}" duration="{{index_duration}}" interval="{{index_interval}}" circular="{{circular}}" autoplay>
+        <block wx:for="{{swiperImg}}" wx:key="this"> 
+          <swiper-item>
+            <image src="{{item.imgurl}}" class="swiper_image"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 列表 -->
+    <view class="index_list">
+      <view class="list_top">
+        <text class="list_title">本店课程</text>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2019-09-01" bindchange="bindDateChange" class="picker">
+          <view class="date_list">
+            <text class="list_date">{{date}}</text>
+            <image src="../../../static/images/littleicon/sanjiao.png"></image>
+          </view>
+        </picker>
+        
+      </view>
+      <view class="list_bottom">
+        <block wx:for="{{listData}}" wx:key="this">
+          <view class="list_item">
+            <view class="list_items items_top">
+              <view class="bac">
+                <text>私</text>
+              </view>
+              <text>{{item.title}}</text>
+              <text>{{item.state}}</text>
+            </view>
+            <view class="list_items items_middle">
+              <text>{{item.date}}</text>
+              <text>{{item.course}}</text>
+            </view>
+            <view class="list_items">
+              <text>学员：{{item.student}}</text>
+            </view>
+            <view class="list_items">
+              <text>教练：{{item.coach}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

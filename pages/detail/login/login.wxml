@@ -1,0 +1,25 @@
+<!--pages/detail/login/login.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="top_item"> 
+      <image src="../../../static/images/littleicon/phone.png"></image>
+      <input placeholder='请输入手机号' bindinput="inputValue1" type="text"></input>
+    </view>
+    <view class="top_item">
+      <image src="../../../static/images/littleicon/pass.png"></image>
+      <input password placeholder='请输入登录密码' bindinput="inputValue2" type="text"></input>
+    </view>
+  </view>
+  <view class="middle">
+    <button bindtap="loginClick">登录</button>
+    <view class="reg">
+      <text bindtap="forgetClick">忘记密码</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <text>第三方登录</text>
+    <button class='wxbtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <image src="../../../static/images/littleicon/wx.png"></image>
+    </button>
+  </view>
+</view>

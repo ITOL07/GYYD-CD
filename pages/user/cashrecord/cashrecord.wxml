@@ -1,0 +1,14 @@
+<!--pages/user/cashrecord/cashrecord.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <view class="list">
+      <block wx:for="{{cashDate}}" wx:key="this">
+        <view class="items">
+          <text>{{item.date}}</text>
+          <text>{{item.price}}</text>
+          <text>{{item.state}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

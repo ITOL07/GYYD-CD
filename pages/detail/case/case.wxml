@@ -1,0 +1,25 @@
+<!--pages/detail/case/case.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="title">
+      <image src="../../../static/images/user/header.png"></image>
+      <text>杨宋的学员</text>
+    </view>
+    <view class="result">
+      <text class="text1">健身成果</text>
+      <text class="text2">身材一直便瘦身体也不是很好，之后决定开始健身就去费恩莱斯国际健身学院学习教练行业，从110多斤的瘦猴增肌到168斤</text>
+    </view>
+    <view class="compare">
+      <text>健身前后</text> 
+      <view class="compare_img">
+        <image src="../../../static/images/detail/compare.png"></image>
+        <image src="../../../static/images/detail/compare.png"></image>
+        <image src="../../../static/images/detail/compare.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <image src="../../../static/images/littleicon/left.png"></image>
+    <image src="../../../static/images/littleicon/right.png"></image>
+  </view>
+</view>

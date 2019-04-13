@@ -1,0 +1,84 @@
+/* pages/detail/login/login.wxss */
+.container{
+  background:#FFFFFF;
+  height:1200rpx;
+}
+.top{
+  width:90%;
+  height:25%;
+  margin:0 auto;
+}
+.top_item{
+  width:100%;
+  height:40%;
+  display:flex;
+  flex-direction:row;
+  margin-top:20rpx;
+  align-items:center;
+}
+.top_item image{
+  display:block;
+  width:17rpx;
+  height:27rpx;
+  margin-left:5%;
+  margin-right:5%;
+}
+.top_item input{
+  width:80%;
+  height:50rpx;
+  border-bottom:3rpx solid #EEEEEE;
+  font-size:26rpx;
+  color:#999999;
+}
+.middle{
+  width:100%;
+  height:25%;
+  margin-top:30rpx;
+}
+.middle button{
+  width:70%;
+  margin:60rpx auto;
+  height:100rpx;
+  background:#DB692A;
+  font-size:32rpx;
+  border-radius:50rpx;
+  color:#FFFFFF;
+  line-height:100rpx;
+}
+.reg{
+  width:20%;
+  height:80rpx;
+  margin-left:60%;
+}
+.reg text{
+  font-size:24rpx;
+  color:#DB692A;
+  width:50%;
+  margin-left:8%;
+}
+.bottom{
+  width:100%;
+  height:30%;
+  margin-top:10%;
+}
+.bottom text{
+  height:30%;
+  line-height:108rpx;
+  color:#999999;
+  font-size:30rpx;
+  text-align:center;
+  display:block;
+}
+.bottom image{
+  display:block;
+  width:90rpx;
+  height:90rpx;
+}
+.wxbtn{
+  border-radius:50%;
+  width:90rpx;
+  height:90rpx;
+  margin: 20rpx auto;
+  padding-left:0;
+  padding-right:0;
+}

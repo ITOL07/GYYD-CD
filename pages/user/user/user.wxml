@@ -1,0 +1,58 @@
+<!--pages/user/user/user.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <!-- 顶部 -->
+    <view class="top">
+      <view class="header_left"> 
+        <image src="../../../static/images/user/store.png"></image>
+      </view> 
+      <view class="header_right" bindtap="detailClick">
+        <view class="item">
+          <text class="title">腾讯众创空间店</text>
+        </view>
+        <view class="item">
+          <text class="addr">北京市昌平区回龙观东大街338号腾讯重创空间B座349</text>
+        </view>
+        <view class="item phone">
+          <text class="phone_item">010-89778899</text>
+          <text class="detail">详情</text>
+          <image src="../../../static/images/littleicon/more.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 中间 -->
+    <view class="middle" bindtap="myincomeClick">
+      <view class="middle_items items_top">
+        <text>当月收入</text>
+        <text bindtap="incomedetailClick">收入明细></text>
+      </view>
+      <view class="middle_items items_middle">
+        <text>授课收入(元)</text>
+        <text>¥8,620</text>
+      </view>
+    </view>
+    <!-- 底部 -->
+    <view class="bottom">
+      <view class="list_item" bindtap="myprivate">
+        <text>我的私教</text>
+        <image src="../../../static/images/littleicon/more.png"></image>
+      </view>
+      <view class="list_item" bindtap="myvip">
+        <text>我的会员</text>
+        <image src="../../../static/images/littleicon/more.png"></image>
+      </view>
+      <view class="list_item" bindtap="mymessage">
+        <text>我的消息</text>
+        <image src="../../../static/images/littleicon/more.png"></image>
+      </view>
+      <view class="list_item" bindtap="myset">
+        <text>设置</text>
+        <image src="../../../static/images/littleicon/more.png"></image>
+      </view>
+      <view class="list_item" bindtap="agreement">
+        <text>用户协议</text>
+        <image src="../../../static/images/littleicon/more.png"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

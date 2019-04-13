@@ -1,0 +1,28 @@
+/* pages/detail/certificate/certificate.wxss */
+.container{
+  background:#FAFAFA;
+  height:1200rpx;
+}
+.header{
+  width:100%;
+  height:800rpx;
+}
+.header image{
+  display:block;
+  margin:200rpx auto;
+  width:658rpx;
+  height:465rpx;
+}
+.bottom{
+  width:30%;
+  height:200rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  margin-top:0 auto;
+}
+.bottom image{
+  display:block;
+  width:35rpx;
+  height:60rpx;
+}

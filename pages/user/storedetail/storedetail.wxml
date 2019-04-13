@@ -1,0 +1,78 @@
+<!--pages/user/storedetail/storedetail.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" class="scroll_body">
+    <view class="top">
+      <text class="edit" bindtap="editClick">编辑</text>
+    </view>
+    <view class="detail_header"> 
+      <view class="header_left">
+        <image src="../../../static/images/user/store.png"></image>
+      </view>
+      <view class="header_right">
+        <view class="item">
+          <text class="title">腾讯众创空间店</text>
+        </view>
+        <view class="item"> 
+          <text>北京市昌平区回龙观东大街338号腾讯重创空间B座349</text>
+        </view>
+        <view class="item phone">
+          <text>联系电话：010-89778899</text>
+        </view>
+      </view>
+    </view>
+    <view class="store_middle">
+      <view class="middle_top">
+        <text class="line">|</text>
+        <text class="txt">门店面积</text>
+      </view>
+      <text class="middle_bottom">300m²</text>
+    </view>
+    <view class="store_middle">
+      <view class="middle_top">
+        <text class="line">|</text>
+        <text class="txt">营业时间</text>
+      </view>
+      <text class="middle_bottom">每天00:00~23:59</text>
+    </view>
+    <view class="store_middle">
+      <view class="middle_top">
+        <text class="line">|</text>
+        <text class="txt">基础设施</text>
+      </view>
+      <view class="store_facilities">
+        <text class="middle_bottom">充电宝</text>
+        <text class="middle_bottom">洗浴</text>
+        <text class="middle_bottom">WIFI</text>
+        <text class="middle_bottom">停车场</text>
+      </view>
+    </view> 
+    <view class="map">
+      <view class="middle_top">
+        <text class="line">|</text>
+        <text class="txt">门店地址</text>
+      </view>
+      <map
+        id="map"
+        longitude="113.324520"
+        latitude="23.099994"
+        scale="14"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        show-location
+        style="width: 100%; height: 260rpx;"
+      ></map>
+    </view>
+    <view class="storeimg">
+      <view class="middle_top">
+        <text class="line">|</text>
+        <text class="txt">门店图片</text>
+      </view>
+      <view class="imgall">
+        <block wx:for="{{storeImg}}" wx:key="this">
+          <image src="{{item.imgurl}}"></image>
+        </block>
+      </view>
+      
+    </view>
+  </scroll-view>
+</view>

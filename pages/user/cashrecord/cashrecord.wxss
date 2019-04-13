@@ -1,0 +1,30 @@
+/* pages/user/cashrecord/cashrecord.wxss */
+.container{
+  background:#FAFAFA;
+}
+.list{
+  width:100%;
+  height:auto;
+}
+.items{
+  width:100%;
+  height:110rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  background:#FFFFFF;
+  border-bottom:3rpx solid #EEEEEE;
+}
+.items text:nth-child(1){
+  font-size:22rpx;
+  color:#666666;
+}
+.items text:nth-child(2){
+  font-size:30rpx;
+  color:#666666;
+}
+.items text:nth-child(3){
+  font-size:22rpx;
+  color:#F85F58;
+}

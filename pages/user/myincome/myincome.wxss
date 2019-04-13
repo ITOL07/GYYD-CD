@@ -1,0 +1,151 @@
+/* pages/user/myincome/myincome.wxss */
+.top{
+  width:95%;
+  height:377rpx;
+  margin:0 auto;
+  background-image:url('https://appsjk-1258453917.cos.ap-beijing.myqcloud.com/temp/background.png');
+  border-radius:50rpx;
+  margin-top:20rpx;
+  display:flex;
+  flex-direction:column;
+}
+.top text{
+  color:#FFFFFF;
+}
+.top_items1{
+  width:90%;
+  height:30%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-left:7%;
+}
+
+.top_items1 .picker{
+  width:40%;
+  height:100%;
+  display:flex;
+  align-items: center;
+}
+.top_items1 .date_list{
+  width:110%;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+.list_top .list_date{
+  width:80%;
+  height:100%;
+  font-size:24rpx;
+  color:#666666;
+}
+
+.top_items1 image{
+  display:block;
+  width:20rpx;
+  height:20rpx;
+  margin-left:3%;
+}
+.top_items2{
+  width:90%;
+  height:30%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  margin-left:7%;
+  margin-top:5%;
+  border-top:3rpx solid #FFFFFF;
+}
+.top_items2 text{
+  font-size:22rpx; 
+}
+.top>text:nth-child(2){
+  font-size:48rpx;
+  text-align:center;
+  width:90%;
+  margin-left:7%;
+}
+.top>text:nth-child(3){
+  font-size:24rpx;
+  text-align:center;
+  width:90%;
+  margin-left:7%;
+}
+.items_left{
+  display:flex;
+  flex-direction:column;
+}
+button{
+  width:110rpx;
+  height:50rpx;
+  border-radius:30rpx;
+  font-size:20rpx;
+  text-align:center;
+  line-height:50rpx;
+  border:2rpx solid #FFFFFF;
+  background:#EE6F2D;
+  color:#FFFFFF;
+}
+
+.bottom{
+  width:90%;
+  height:auto;
+  margin:30rpx auto;
+}
+.bottom text{
+  font-size:30rpx;
+  color:#333333;
+}
+.list{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+}
+.list_items{
+  width:100%;
+  height:188rpx;
+  display:flex;
+  flex-direction:row;
+  margin-top:20rpx;
+  background:#FFFFFF;
+}
+.list_items_left{
+  width:150rpx;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+} 
+.list_items_left .lists{
+  width:120rpx;
+  height:120rpx;
+  border-radius:50%;
+  background:#EE6F2D;
+}
+.list_items_middle{
+  width:60%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-left:5%;
+}
+.list_items_middle text{
+  width:100%;
+  height:33%;
+  color:#666666;
+  font-size:22rpx;
+  line-height:63rpx;
+}
+.list_items_middle text:nth-child(1){
+  font-size:30rpx;
+  color:#333333;
+}
+.list_items>text{
+  font-size:22rpx !important;
+  color:#F85F58 !important;
+  padding-top:3%;
+}

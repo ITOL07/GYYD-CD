@@ -1,0 +1,60 @@
+{
+  "pages":[
+    
+    "pages/index/index/index",
+    "pages/user/editstoreinfo/editstoreinfo",
+
+    "pages/detail/reg/reg",
+    "pages/detail/myvip/myvip",
+    "pages/detail/remark/remark",
+    "pages/detail/agreement/agreement",
+    "pages/detail/message/message",
+    "pages/detail/set/set",
+    "pages/detail/case/case",
+    "pages/detail/login/login",
+    "pages/detail/photo/photo",
+    "pages/detail/certificate/certificate",
+    
+    "pages/user/privatedetail/privatedetail",
+    "pages/user/myprivate/myprivate",
+    "pages/user/cashrecord/cashrecord",
+    "pages/user/cash/cash",
+    "pages/user/myincome/myincome",
+    
+    "pages/user/storedetail/storedetail",
+    
+    "pages/user/user/user",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#EE6F2D",
+    "backgroundColor": "#2D2E33",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "text": "首页",
+        "iconPath": "./static/images/tabbar/index.png",
+        "selectedIconPath": "./static/images/tabbar/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/user/user/user",
+        "text": "我的",
+        "iconPath": "./static/images/tabbar/user.png",
+        "selectedIconPath": "./static/images/tabbar/userSelected.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

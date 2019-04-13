@@ -1,0 +1,7 @@
+<!--pages/detail/remark/remark.wxml-->
+<view class="container">
+  <view class="list">
+    <input placeholder='月亮'></input>
+    <button>保存修改</button>
+  </view>
+</view>
