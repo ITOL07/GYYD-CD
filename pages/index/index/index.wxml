@@ -15,7 +15,7 @@
     <view class="index_list">
       <view class="list_top">
         <text class="list_title">本店课程</text>
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2019-09-01" bindchange="bindDateChange" class="picker">
+        <picker mode="date" value="{{date}}" start="2018-09-01" end="2020-09-01" bindchange="bindDateChange" class="picker">
           <view class="date_list">
             <text class="list_date">{{date}}</text>
             <image src="../../../static/images/littleicon/sanjiao.png"></image>
@@ -30,18 +30,19 @@
               <view class="bac">
                 <text>私</text>
               </view>
-              <text>{{item.title}}</text>
-              <text>{{item.state}}</text>
+              <text>{{item.course_name}}</text>
+              <text>{{item.status_desc}}</text>
             </view>
             <view class="list_items items_middle">
-              <text>{{item.date}}</text>
-              <text>{{item.course}}</text>
+              <text>{{item.start_time_1}}</text>
+              <text>{{item.end_time_1}}</text>
+              <text>第{{item.seq_no}}/{{item.total}}课</text>
             </view>
             <view class="list_items">
-              <text>学员：{{item.student}}</text>
+              <text>学员：{{item.mem_name}}</text>
             </view>
             <view class="list_items">
-              <text>教练：{{item.coach}}</text>
+              <text>教练：{{item.coach_name}}</text>
             </view>
           </view>
         </block>

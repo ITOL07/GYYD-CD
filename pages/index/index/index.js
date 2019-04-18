@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 var fileData = require("../../../utils/data.js");
+var util = require("../../../utils/util.js");
 
 Page({
   data: {
@@ -13,9 +14,9 @@ Page({
     circular: true,
 
     swiperImg: fileData.getSwiperImgData(),
-    listData: fileData.getListData(),
-
-    date: '2018-01-01'
+    // listData: fileData.getListData(),
+    listData:null,
+    date: '2019-04-01'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -28,34 +29,10 @@ Page({
     this.setData({
       date: e.detail.value
     })
+    this.getClubLess();
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    this.getClubLess();
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -63,6 +40,24 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  getClubLess:function(){
+    var _this = this
+    var url_tmp = util.getListConfig().url_test;
+    wx.request({
+      url: url_tmp + '/club/qryLesson',
+      data: {
+        club_id: 4,
+        start_time: _this.data.date,
+        status: ''
+      },
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          listData: res.data
+        })
+      }
     })
   }
 })

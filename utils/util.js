@@ -24,8 +24,19 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+//获取系统配置
+function getListConfig() {
+  var arr =
+  {
+    url_sc: 'http://39.106.156.239:80',
+    // url_test: 'https://www.guyueyundong.com',
+    url_test: 'http://localhost:8099'
+  }
+  return arr;
+}
 
 module.exports = {
   formatTime: formatTime,
+  getListConfig: getListConfig,
   routers
 }
