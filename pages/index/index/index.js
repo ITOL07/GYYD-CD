@@ -45,13 +45,15 @@ Page({
   getClubLess:function(){
     var _this = this
     var url_tmp = util.getListConfig().url_test;
+    console.log('user_id====' + app.globalData.user_id)
     wx.request({
       url: url_tmp + '/club/qryLesson',
       data: {
-        club_id: 4,
+        club_id: app.globalData.user_id,
         start_time: _this.data.date,
         status: ''
       },
+
       success(res) {
         console.log(res.data)
         _this.setData({

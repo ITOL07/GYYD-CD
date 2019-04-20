@@ -11,7 +11,7 @@ Page({
   data: {
     incomeDate: fileData.getIncomeData(),
 
-    date: '2018-01-01'
+    date: '2019-04-14'
   },
 
   bindDateChange: function (e) {
@@ -19,6 +19,23 @@ Page({
     this.setData({
       date: e.detail.value
     })
+    var url_tmp = commonData.getListConfig().url_test;
+    var _this = this;
+    wx.request({
+      url: url_tmp + '/club/qryLessReg',
+      data: {
+        club_id: app.globalData.user_id,
+        reg_date: e.detail.value,
+        // status: 1
+      },
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          clubIncomeData: res.data
+        })
+
+      }
+    }) 
   },
   /**
    * 生命周期函数--监听页面加载
@@ -29,7 +46,27 @@ Page({
     commonData.routers(storeRouter, storeTitle);
   },
   onLoad: function (options) {
-
+    var url_tmp = commonData.getListConfig().url_test;
+    var _this = this;
+    //获取授课总收
+    wx.request({
+      url: url_tmp + '/club/qryLessReg',
+      data: {
+        club_id: app.globalData.user_id,
+        reg_date: _this.data.date,
+        // status: 1
+      },
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          clubIncomeData:res.data
+        })
+        
+      }
+    }) 
+    _this.setData({
+      clubIncomeSum: app.globalData.clubIncomeData
+    })
   },
 
   /**

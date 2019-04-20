@@ -8,13 +8,13 @@
       </view> 
       <view class="header_right" bindtap="detailClick">
         <view class="item">
-          <text class="title">腾讯众创空间店</text>
+          <text class="title">{{storeListData.name}}</text>
         </view>
         <view class="item">
-          <text class="addr">北京市昌平区回龙观东大街338号腾讯重创空间B座349</text>
+          <text class="addr">{{storeListData.address}}</text>
         </view>
         <view class="item phone">
-          <text class="phone_item">010-89778899</text>
+          <text class="phone_item">{{storeListData.tel}}</text>
           <text class="detail">详情</text>
           <image src="../../../static/images/littleicon/more.png"></image>
         </view>
@@ -24,11 +24,11 @@
     <view class="middle" bindtap="myincomeClick">
       <view class="middle_items items_top">
         <text>当月收入</text>
-        <text bindtap="incomedetailClick">收入明细></text>
+        <text catchtap="incomedetailClick">收入明细></text>
       </view>
       <view class="middle_items items_middle">
         <text>授课收入(元)</text>
-        <text>¥8,620</text>
+        <text>¥ {{clubIncomeData.les_total_amt}}</text>
       </view>
     </view>
     <!-- 底部 -->

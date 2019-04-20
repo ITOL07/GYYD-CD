@@ -1,3 +1,5 @@
+var app=getApp()
+
 function routers(routers, title) {
   wx.navigateTo({
     url: routers,
@@ -35,8 +37,49 @@ function getListConfig() {
   return arr;
 }
 
+function wxlogin() {
+  // 登录
+  wx.login({
+    success: res => {
+      // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      var _this = this
+      var url_tmp = _this.getListConfig().url_test;
+      wx.request({
+        // url: 'https://www.guyueyundong.com/wxuser/login',
+        url: url_tmp + '/wxuser/login',
+        data: {
+          code: res.code,
+          type: 3
+        },
+        method: 'POST',
+        // dataType: 'json',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'  //发送post请求
+        },
+        success: function (res) {
+          //请求成功的处理
+          //console.log(code);
+          app.globalData.openid = res.data.openid
+          app.globalData.user_id = res.data.id
+          console.log("发送code成功", res.data);
+          console.log("发送code成功", res.data.openid);
+        }  
+      })
+      wx.switchTab({
+        url: '../../index/index/index',
+        success: function () {
+          wx.setNavigationBarTitle({
+            title: '首页'
+          })
+        }
+      })
+    }
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
   getListConfig: getListConfig,
-  routers
+  routers,
+  wxlogin: wxlogin
 }

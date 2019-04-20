@@ -50,7 +50,38 @@ Page({
     var storeTitle = '用户协议';
     commonData.routers(storeRouter, storeTitle);
   },
-  onLoad: function (options) {
+  onLoad: function () {
+
+    console.log("开始请求门店信息！！")
+    var url_tmp = commonData.getListConfig().url_test;
+    var _this = this;
+    // console.log('options.id===' + options.id)
+    //获取门店信息
+    wx.request({
+      url: url_tmp + '/club/qry?club_id=4',
+      success(res) {
+        console.log(res.data)
+
+        _this.setData({
+          storeListData: res.data
+        })
+      }
+    }) 
+    //获取授课总收
+    wx.request({
+      url: url_tmp + '/club/qrySum',
+      data:{
+        club_id: app.globalData.user_id,
+        reg_date:'2019-04-19'
+      },
+      success(res) {
+        console.log(res.data)
+        app.globalData.clubIncomeData=res.data
+        _this.setData({
+          clubIncomeData:app.globalData.clubIncomeData
+        })
+      }
+    }) 
 
   },
 
