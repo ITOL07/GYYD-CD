@@ -58,7 +58,10 @@ Page({
     // console.log('options.id===' + options.id)
     //获取门店信息
     wx.request({
-      url: url_tmp + '/club/qry?club_id=4',
+      url: url_tmp + '/club/qry',
+      data:{
+        club_id:app.globalData.user_id
+      },
       success(res) {
         console.log(res.data)
 
