@@ -105,3 +105,11 @@
   height:120rpx;
   margin-top:30rpx;
 }
+.wxbtn{
+  border-radius:50%;
+  width:90rpx;
+  height:90rpx;
+  margin: 20rpx auto;
+  padding-left:0;
+  padding-right:0;
+}

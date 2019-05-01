@@ -9,19 +9,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    privateDate: fileData.getPrivateData()
+    // privateData: fileData.getPrivateData()
+    privateData:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  privateClick: function(){
-    var storeRouter = '../../user/privatedetail/privatedetail';
+  privateClick: function(e){
+    var storeRouter = '../../user/privatedetail/privatedetail?coach_id=' + e.currentTarget.dataset.coachId;
     var storeTitle = '私教详情';
     commonData.routers(storeRouter, storeTitle);
   },
   onLoad: function (options) {
+    var _this = this
+    var url_tmp = commonData.getListConfig().url_test;
+    
+    wx.request({
+      url: url_tmp + '/club/qryCoach',
+      data: {
+        club_id: app.globalData.user_id
+      },
 
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          privateData: res.data
+        })
+      }
+    })
   },
 
   /**

@@ -91,10 +91,12 @@
 .middle_bottom{
   font-size:30rpx;
   color:#666666;
-  margin-left:4%;
+  /* margin-left:4%; */
 }
 .store_facilities text{
   background:#EEEEEE;
+  display: flex;
+  flex-direction: row;
 }
 .map{
   width: 90%;
@@ -129,11 +131,12 @@
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
-  justify-content:space-between;
+  /* justify-content:space-between; */
 }
 .storeimg .imgall image{
   display:block;
   width:30%;
   height:200rpx;
   margin-top:20rpx;
+  padding-left:5%;
 }

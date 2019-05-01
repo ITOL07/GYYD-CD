@@ -1,7 +1,7 @@
 // pages/user/storedetail/storedetail.js
 const app = getApp()
 var fileData = require("../../../utils/data.js");
-var commonData = require("../../../utils/util.js"); 
+var util = require("../../../utils/util.js"); 
 
 Page({
 
@@ -29,7 +29,15 @@ Page({
       dottedLine: true,
     }],
 
-    storeImg: fileData.getStoreImgData()
+    storeImg: fileData.getStoreImgData(),
+    club_id: app.globalData.user_id,
+    storeData:null,
+    open_time: null,
+    close_time: null,
+    storeImg: null,
+    latitude: null,
+    longitude: null,
+    jcss:null
   },
 
   /**
@@ -38,10 +46,44 @@ Page({
   editClick: function(){
     var storeRouter = '../../user/editstoreinfo/editstoreinfo';
     var storeTitle = '编辑门店信息';
-    commonData.routers(storeRouter, storeTitle);
+    util.routers(storeRouter, storeTitle);
   },
   onLoad: function (options) {
-    
+    console.log("开始请求门店信息！！")
+    var url_tmp = util.getListConfig().url_test;
+    var _this = this;
+    _this.setData({
+      club_id: app.globalData.user_id
+    })
+    console.log('club_id===' + _this.data.club_id)
+    wx.request({
+      url: url_tmp + '/club/qry?club_id=' + _this.data.club_id,
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          storeData: res.data,
+          open_time: res.data.openTime.substring(9, 14),
+          close_time: res.data.closeTime.substring(9, 14),
+          latitude: res.data.la,
+          longitude: res.data.lo,
+          jcss: res.data.jcss.split('、')
+        })
+        console.log("jcss===="+_this.data.jcss)
+      }
+    }) 
+    wx.request({
+      url: url_tmp + '/img/load2',
+      data: {
+        user_id: app.globalData.user_id,
+        type: 32
+      },
+      success(res) {
+        _this.setData({
+          storeImg: res.data
+        })
+        console.log(_this.data.storeImg)
+      }
+    })
   },
 
   /**

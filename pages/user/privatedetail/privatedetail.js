@@ -32,7 +32,24 @@ Page({
   },
 
   onLoad: function (options) {
-
+    console.log(options.coach_id)
+    var _this=this
+    var url_tmp = commonData.getListConfig().url_test;
+    wx.request({
+      url: url_tmp + '/coach/qryLesson',
+      data: {
+        coach_id: options.coach_id,
+        // reg_date: util.formatTime(new Date()),
+        reg_date: '2019-04',
+        status: ''
+      },
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          incomeData: res.data
+        })
+      }
+    })
   },
 
   /**

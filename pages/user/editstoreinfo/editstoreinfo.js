@@ -1,7 +1,7 @@
 // pages/user/editstoreinfo/editstoreinfo.js
 const app = getApp()
 var fileData = require("../../../utils/data.js");
-var commonData = require("../../../utils/util.js"); 
+var util = require("../../../utils/util.js"); 
 
 Page({
 
@@ -31,7 +31,23 @@ Page({
     storeImg: fileData.getStoreImgData(),
     inputVal: '',
     actionHidden: true,
-    addImg: ''
+    addImg: '',
+    club_id: app.globalData.user_id,
+    storeData: null,
+    open_time: null,
+    close_time: null,
+    latitude: null,
+    longitude: null,
+    jcss: null,
+    club_name_in:null,
+    addr_in:null,
+    area_in:null,
+    tel:null,
+    mobileLocation: {//移动选择位置数据
+      longitude: 0,
+      latitude: 0,
+      address: '',
+    }
   },
   cancel: function () {
     this.setData({
@@ -65,13 +81,52 @@ Page({
       inputVal: res.detail.value
     })
   },
+  club_name_in: function (res) {
+    this.setData({
+      club_name_in: res.detail.value
+    })
+  },
+  addr_in: function (res) {
+    this.setData({
+      addr_in: res.detail.value
+    })
+  },
+  area_in: function (res) {
+    this.setData({
+      area_in: res.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   finishClick: function(){
+    console.log("开始上传门店信息！！")
+    var url_tmp = util.getListConfig().url_test;
+    var _this = this;
+    console.log('club_id===' + _this.data.club_id)
+    console.log('addr===' + _this.data.mobileLocation.address)
+    wx.request({
+      url: url_tmp + '/club/update',
+      data:({
+        club_id: app.globalData.user_id,
+        name:_this.data.club_name_in,
+        la: _this.data.mobileLocation.latitude,
+        lo: _this.data.mobileLocation.longitude,
+        addr: _this.data.mobileLocation.address,
+        tel:_this.data.tel,
+        area:_this.data.area_in,
+        open_time:_this.data.open_time,
+        close_time:_this.data.close_time,
+        jcss:_this.data.jcss
+      }),
+      success(res) {
+        console.log(res.data)
+      }
+    })
+
     var storeRouter = '../../user/storedetail/storedetail';
     var storeTitle = '门店信息';
-    commonData.routers(storeRouter, storeTitle);
+    util.routers(storeRouter, storeTitle);
   },
   addClick: function () {
     this.setData({
@@ -92,7 +147,42 @@ Page({
     })
   },
   onLoad: function (options) {
-
+    console.log("开始请求门店信息！！")
+    var url_tmp = util.getListConfig().url_test;
+    var _this = this;
+    _this.setData({
+      club_id: app.globalData.user_id
+    })
+    console.log('club_id===' + _this.data.club_id)
+    wx.request({
+      url: url_tmp + '/club/qry?club_id=' + _this.data.club_id,
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          storeData: res.data,
+          open_time: res.data.openTime.substring(9, 14),
+          close_time: res.data.closeTime.substring(9, 14),
+          latitude: res.data.la,
+          longitude: res.data.lo,
+          tel:res.data.tel,
+          jcss: res.data.jcss.split('、')
+        })
+        console.log("jcss====" + _this.data.jcss)
+      }
+    })
+    wx.request({
+      url: url_tmp + '/img/load2',
+      data: {
+        user_id: app.globalData.user_id,
+        type: 32
+      },
+      success(res) {
+        _this.setData({
+          storeImg: res.data
+        })
+        console.log(_this.data.storeImg)
+      }
+    })
   },
 
   /**
@@ -142,5 +232,28 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  //移动选点
+  moveToLocation: function () {
+    var that = this;
+    wx.chooseLocation({
+      success: function (res) {
+
+        let mobileLocation = {
+          longitude: res.longitude,
+          latitude: res.latitude,
+          address: res.address,
+        };
+        that.setData({
+          mobileLocation: mobileLocation,
+          addr_in: mobileLocation.address
+        });
+        console.log(mobileLocation)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    });
+},
+
 })

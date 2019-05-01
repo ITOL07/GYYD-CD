@@ -13,14 +13,14 @@
       <text>按日授课数排序</text>
     </view>
     <view class="bottom">
-      <block wx:for="{{privateDate}}" wx:key="this">
-        <view class="list" bindtap="privateClick">
+      <block wx:for="{{privateData}}" wx:key="this">
+        <view class="list" data-coach-id="{{item.coachId}}" bindtap="privateClick">
           <view class="list_left">
-            <image src="{{item.imgurl}}"></image>
+            <image src="../../../static/images/user/private.png"></image>
           </view>
           <view class="list_right">
             <text>{{item.name}}</text>
-            <text>{{item.phone}}</text>
+            <text>{{item.tel}}</text>
             <text>{{item.course}}</text>
           </view>
         </view>
