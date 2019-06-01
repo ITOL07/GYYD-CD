@@ -1,4 +1,7 @@
 // pages/detail/agreement/agreement.js
+const app = getApp()
+var fileData = require("../../../utils/data.js");
+var util = require("../../../utils/util.js");
 Page({
 
   /**
@@ -7,7 +10,19 @@ Page({
   data: {
 
   },
+  loadClick: function (options) {
+    console.log(options)
+    var regRouter = '../../user/useragree/useragree?name=' + options.currentTarget.id;
+    if (options.currentTarget.id == "priv") {
+      var regTitle = '用户隐私协议';
+    } else if (options.currentTarget.id == "lesson") {
+      var regTitle = '私教课协议';
+    } else {
+      var regTitle = '用户协议';
+    }
 
+    util.routers(regRouter, regTitle);
+  },
   /**
    * 生命周期函数--监听页面加载
    */

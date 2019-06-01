@@ -4,12 +4,21 @@ App({
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    wx.setStorageSync('logs', logs);
+
+    wx.getSystemInfo({
+      success: res => {
+        console.log(res)
+        this.globalData.systemInfo = res.system.toUpperCase()
+      }
+    })
   },
+  
   globalData: {
     userInfo: null,
     clubIncomeData:null,
     openid:null,
-    user_id:null
+    user_id:null,
+    systemInfo:null
   }
 })

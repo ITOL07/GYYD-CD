@@ -13,7 +13,7 @@ Page({
     index_duration: 1000,
     circular: true,
 
-    swiperImg: fileData.getSwiperImgData(),
+    swiperImg: null,
     // listData: fileData.getListData(),
     listData:null,
     date: '2019-04-01'
@@ -33,6 +33,7 @@ Page({
   },
   onLoad: function () {
     this.getClubLess();
+    this.getBanner();
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -61,5 +62,23 @@ Page({
         })
       }
     })
+  },
+  getBanner:function(){
+    var _this = this
+    var url_tmp = util.getListConfig().url_test;
+    wx.request({
+      // url: url_tmp + '/coach/qry',
+      url: url_tmp + '/img/load1',
+      data: {
+        //6为轮播图
+        type: 6
+      },
+      success(res) {
+        console.log(res.data)
+        _this.setData({
+          swiperImg: res.data
+        })
+      }
+    }) 
   }
 })

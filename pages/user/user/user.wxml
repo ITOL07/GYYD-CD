@@ -4,7 +4,7 @@
     <!-- 顶部 -->
     <view class="top">
       <view class="header_left"> 
-        <image src="../../../static/images/user/store.png"></image>
+        <image src="{{storeListData.icon}}"></image>
       </view> 
       <view class="header_right" bindtap="detailClick">
         <view class="item">
