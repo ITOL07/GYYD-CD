@@ -40,7 +40,7 @@ Page({
     }
     var _this = this
     if(!that.data.flag){
-      var url_tmp = fileData.getListConfig().url_test;
+      var url_tmp = util.getListConfig().url_test;
       var _this = this
       wx.request({
         url: url_tmp + '/doc/load',

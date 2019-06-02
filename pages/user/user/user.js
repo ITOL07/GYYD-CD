@@ -16,7 +16,7 @@ Page({
    */
   detailClick: function(){
     var storeRouter = '../../user/storedetail/storedetail';
-    var storeTitle = '门店信息';
+    var storeTitle = '场地信息';
     commonData.routers(storeRouter, storeTitle);
   },
   myincomeClick: function(){

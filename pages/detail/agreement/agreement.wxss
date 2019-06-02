@@ -29,4 +29,5 @@
   width:30rpx;
   height:30rpx;
   padding-top:5%;
+  margin-right:5%;
 }

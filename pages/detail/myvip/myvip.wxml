@@ -1,12 +1,12 @@
 <!--pages/detail/myvip/myvip.wxml-->
 <view class="container">
   <scroll-view scroll-y="true" class="scroll_body">
-    <view class="top">
+    <!-- <view class="top">
       <image src="../../../static/images/littleicon/search.png"></image>
       <input placeholder='搜索学员昵称或手机号'></input>
       <text>排序</text>
       <image src="../../../static/images/littleicon/sanjiao2.png"></image>
-    </view>
+    </view> -->
     <view class="bottom">
       <block wx:for="{{vipDate}}" wx:key="this">
         <view class="list">

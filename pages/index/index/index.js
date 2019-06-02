@@ -10,13 +10,13 @@ Page({
     index_color: "#646967",
     index_activeColor: "#FFFFFF",
     index_interval: 3000,
-    index_duration: 1000,
+    index_duration: 30,
     circular: true,
 
     swiperImg: null,
     // listData: fileData.getListData(),
     listData:null,
-    date: '2019-04-01'
+    date: '2019-06-01'
   },
   //事件处理函数
   bindViewTap: function() {

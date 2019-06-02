@@ -1,20 +1,21 @@
 <!--pages/user/myprivate/myprivate.wxml-->
 <view class="container">
   <scroll-view scroll-y="true" class="scroll_body">
-    <view class="top">
+    <!-- <view class="top">
       <image src="../../../static/images/littleicon/search.png"></image>
       <input placeholder='搜索学员昵称或手机号'></input>
       <text>排序</text>
       <image src="../../../static/images/littleicon/sanjiao2.png"></image>
-    </view>
-    <view class="middle">
+    </view> -->
+    <!-- <view class="middle">
       <text>按累计授课数排序</text>
       <text>按月授课数排序</text>
       <text>按日授课数排序</text>
-    </view>
+    </view> -->
     <view class="bottom">
       <block wx:for="{{privateData}}" wx:key="this">
-        <view class="list" data-coach-id="{{item.coachId}}" bindtap="privateClick">
+        <!-- <view class="list" data-coach-id="{{item.coachId}}" bindtap="privateClick"> -->
+         <view class="list" data-coach-id="{{item.coachId}}" >
           <view class="list_left">
             <image src="../../../static/images/user/private.png"></image>
           </view>

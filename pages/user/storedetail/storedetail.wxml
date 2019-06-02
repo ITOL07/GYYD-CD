@@ -1,9 +1,9 @@
 <!--pages/user/storedetail/storedetail.wxml-->
 <view class="container">
   <scroll-view scroll-y="true" class="scroll_body">
-    <view class="top">
+    <!-- <view class="top">
       <text class="edit" bindtap="editClick">编辑</text>
-    </view>
+    </view> -->
     <view class="detail_header"> 
       <view class="header_left">
         <image src="../../../static/images/user/store.png"></image>
