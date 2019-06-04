@@ -1,0 +1,38 @@
+/* pages/set/set.wxss */
+.container{
+  background:#FAFAFA;
+	align-items: center;
+	padding-top: 30rpx;
+}
+.top{
+  width: 93%;
+  height: 90rpx;
+	background-color: #FFFFFF;
+	line-height: 90rpx;
+	border: 2rpx solid #EEEEEE; 
+	padding: 0 3.5%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+	align-items: center;
+}
+.top text, .top1 text{
+  color:#666666;
+  font-size: 30rpx;
+}
+.top image{
+	width: 20rpx;
+	height: 35rpx;
+}
+.else{
+	margin-top: 30rpx;
+}
+button{
+  width:72%;
+  height: 84rpx;
+  margin-top: 80rpx;
+  font-size: 32rpx;
+	color: #292A2E;
+  border-radius: 42rpx;
+  background:linear-gradient(0deg,rgba(251,191,70,0.53),rgba(255,255,255,0.53));
+}

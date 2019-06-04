@@ -1,3 +1,4 @@
+/* pages/user/unBindPhone/unBindPhone.wxss */
 .container{
 	height: 1200rpx;
   background:#FFFFFF;

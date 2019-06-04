@@ -8,17 +8,18 @@
       <image src="../../../static/images/littleicon/sanjiao2.png"></image>
     </view> -->
     <view class="bottom">
-      <block wx:for="{{vipDate}}" wx:key="this">
+      <block wx:for="{{student}}" wx:key="this">
         <view class="list">
           <view class="list_left">
-            <image src="{{item.imgurl}}"></image>
+            <image src="{{item.MemInfo.icon}}"></image>
           </view>
           <view class="list_right">
-            <text>{{item.name}}</text>
-            <text>{{item.state}}</text>
+            <text>{{item.MemInfo.nickName}}</text>
+            <text>{{item.MemInfo.tel}}</text>
           </view>
         </view>
       </block>
     </view>
   </scroll-view>
 </view>
+

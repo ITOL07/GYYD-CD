@@ -10,7 +10,8 @@ Page({
    */
   data: {
     inputVal1: '',
-    inputVal2: ''
+    inputVal2: '',
+    logflag: wx.getStorageSync("logFlag")
   },
   inputValue1: function (res) {
     this.setData({
@@ -160,23 +161,19 @@ Page({
    */
   onLoad: function (options) {
     var _this=this
-    wx.getSetting({
-      success(res) {
-        console.log(res.authSetting['scope.userInfo'])
-        if (res.authSetting['scope.userInfo']){
-          _this.wxlogin()
-        }
+    if (app.globalData.userInfo && _this.data.logflag) {
+      _this.wxlogin()
+    }
+
+    // 给app.js 定义一个方法。
+    app.userInfoReadyCallback = res => {
+      console.log('userInfoReadyCallback: ', res);
+      console.log('获取用户信息成功');
+      if (_this.data.logflag) {
+        _this.wxlogin()
       }
-    })
-    // wx.openSetting({
-    //   success(res) {
-    //     console.log(res.authSetting)
-    //     res.authSetting = {
-    //       "scope.userInfo": true,
-    //       "scope.userLocation": true
-    //     }
-    //   }
-    // })
+
+    };
   },
 
   /**

@@ -41,7 +41,7 @@ Page({
     commonData.routers(storeRouter, storeTitle);
   },
   myset: function () {
-    var storeRouter = '../../detail/set/set';
+    var storeRouter = '../../user/set/set';
     var storeTitle = '设置';
     commonData.routers(storeRouter, storeTitle);
   },

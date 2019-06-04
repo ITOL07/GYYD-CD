@@ -9,6 +9,7 @@
     "pages/detail/agreement/agreement",
     "pages/detail/message/message",
     "pages/detail/set/set",
+    "pages/user/set/set",
     "pages/detail/case/case",
     "pages/detail/login/login",
     "pages/detail/photo/photo",

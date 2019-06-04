@@ -1,0 +1,27 @@
+<!--pages/set/set.wxml-->
+<view class="container">
+  <view wx:if="{{phoneNo==null}}" class="top" bindtap="bindPhone" id="0">
+    <text>绑定手机号</text>
+    <!-- <text>136****2345 ></text>  -->
+    <image src="../../../static/images/littleicon/more.png"></image> 
+  </view>
+  <view wx:if="{{phoneNo!=null}}" class="top" bindtap="unBindPhone" id="1">
+    <text>解绑手机号</text>
+    <!-- <text>136****2345 ></text>  -->
+    <text>{{phoneNo}}</text> 
+  </view>
+  <view class="top" bindtap='forgetPass'>
+    <text>修改密码</text>
+    <image src="../../../static/images/littleicon/more.png"></image> 
+    <!-- <text>></text>  -->
+  </view>
+  <!-- <view wx:if="{{phoneNo==null}}"> 绑定微信</view> -->
+  <view class="top else">
+    <text>版本信息</text>
+    <text>{{version}}</text>
+  </view>
+  <!-- <button wx:if="{{phoneNo!=null||open_id!=null}}" bindtap="exitClick">退出登录</button> -->
+
+  <!-- <button wx:if="{{phoneNo==null}}" bindtap="bindPhone">绑定手机号</button> -->
+  <!-- <button wx:if="{{phoneNo!=null}}" bindtap="">解绑手机号</button> -->
+</view>
