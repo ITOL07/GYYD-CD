@@ -69,10 +69,10 @@ function wxlogin() {
         }  
       })
       wx.switchTab({
-        url: '../../index/index/index',
+        url: '../../user/user/user',
         success: function () {
           wx.setNavigationBarTitle({
-            title: '首页'
+            title: '我的'
           })
         }
       })
