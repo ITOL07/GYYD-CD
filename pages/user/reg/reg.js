@@ -187,7 +187,8 @@ Page({
         method: "POST",
         data: {
           phoneNo: phone,
-          passwd: util.hexMD5(that.data.NewChanges)
+          passwd: util.hexMD5(that.data.NewChanges),
+          type: 3
         },
         header: {
           "content-type": "application/x-www-form-urlencoded"

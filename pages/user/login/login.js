@@ -58,7 +58,7 @@ Page({
       data: {
         phoneNo: This.data.inputVal1,
         passwd: util.hexMD5(This.data.inputVal2),
-        type:1
+        type:3
       },
       method: 'POST',
       // dataType: 'json',
@@ -123,7 +123,49 @@ Page({
     })  },
   wxlogin:function(){
     // 登录
-    commonData.wxlogin();
+    var _this = this
+    console.log('已经获取授权')
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              app.globalData.userInfo = res.userInfo
+              console.log('userInfo++++' + res.userInfo.data)
+              wx.setStorageSync('logFlag', true)
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (app.userInfoReadyCallback) {
+                app.userInfoReadyCallback(res)
+              }
+            }
+          })
+        }
+      }
+    })
+    _this.setData({
+      logflag: true
+    })
+    if (app.globalData.userInfo && _this.data.logflag) {
+      commonData.wxlogin();
+    }
+
+    // 给app.js 定义一个方法。
+    app.userInfoReadyCallback = res => {
+      console.log('userInfoReadyCallback: ', res);
+      console.log('获取用户信息成功');
+      _this.setData({
+        logflag:true
+      })
+      if (_this.data.logflag) {
+        commonData.wxlogin();
+      }
+
+    };
+    
   },
   getPhoneNumber: function (e) {
     console.log(e.detail.iv);

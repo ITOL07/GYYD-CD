@@ -65,19 +65,27 @@
   /* margin-left:10%; */
 }
 .bottom{
-  width:100%;
-  height:50%;
+	width: 100%;
   margin-top:50%;
 }
-.bottom text{
+.bottom view{
+	width: 100%;
+	height: 30rpx;
+  font-size: 24rpx;
   color:#999999;
-  font-size:30rpx;
+	line-height: 60rpx;
   text-align:center;
-  display:block;
+  border-bottom: 2rpx solid #EEEEEE;
 }
 .bottom image{
   display:block;
-  margin:10rpx auto;
-  width:100rpx;
-  height:100rpx;
+  width:90rpx;
+  height:90rpx;
+}
+.wxbtn{
+  border-radius:50%;
+  width:90rpx;
+  height:90rpx;
+  margin: 60rpx 44%;
+  padding: 0;
 }

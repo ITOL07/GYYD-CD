@@ -50,7 +50,7 @@ Page({
     var storeTitle = '用户协议';
     commonData.routers(storeRouter, storeTitle);
   },
-  onLoad: function () {
+  show: function () {
 
     console.log("开始请求门店信息！！")
     var url_tmp = commonData.getListConfig().url_test;
@@ -63,7 +63,7 @@ Page({
         club_id:app.globalData.user_id
       },
       success(res) {
-        console.log(res.data)
+        console.log("门店信息：。。。"+res.data)
 
         _this.setData({
           storeListData: res.data
@@ -87,6 +87,9 @@ Page({
     }) 
 
   },
+  onLoad:function(){
+    this.show();
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -99,7 +102,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.show();
   },
 
   /**
