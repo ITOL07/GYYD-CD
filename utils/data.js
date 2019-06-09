@@ -27,57 +27,69 @@ function getListData() {
   var arr = [
     {
       id: '0',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     },
     {
       id: '1',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     },
     {
       id: '2',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     },
     {
       id: '3',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     },
     {
       id: '4',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     },
     {
       id: '5',
-      title: '增肌max',
-      state: '已预约',
-      date: '2018年11月12日  15:00-16:00',
-      course: '第3/10课',
-      student: '月亮',
-      coach: '杨宋'
+			course_name: '增肌max',
+			status_desc: '已预约',
+			start_time_1: '2018年11月12日  15:00',
+			end_time_1: '16:00',
+			seq_no: '3',
+			total: '10',
+			mem_name: '月亮',
+			coach_name: '杨宋'
     }
   ]
   return arr;

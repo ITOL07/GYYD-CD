@@ -125,18 +125,15 @@
   width:100%;
   height:30%;
 }
-.storeimg .imgall{
-  width:90%;
-  height:auto;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  /* justify-content:space-between; */
+.imgall{
+	width: 98%;
+	margin-top: 20rpx; 
+	margin-left: 3%; 
+	flex-wrap: wrap;
 }
-.storeimg .imgall image{
-  display:block;
-  width:30%;
-  height:200rpx;
-  margin-top:20rpx;
-  padding-left:5%;
+.imgall image{
+	width: 200rpx;
+	height: 200rpx;
+	margin-right: 30rpx;
+	margin-bottom: 20rpx;
 }

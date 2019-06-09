@@ -48,6 +48,16 @@ Page({
     var storeTitle = '编辑门店信息';
     util.routers(storeRouter, storeTitle);
   },
+
+	previewImg: function (e) {
+		let imgs = []
+		let list = this.data.storeImg
+		for (let i = 0; i < list.length; i++) {
+			imgs.push(list[i].img_url)
+		}
+		util.previewImg(e, imgs)
+	},
+
   onLoad: function (options) {
     console.log("开始请求门店信息！！")
     var url_tmp = util.getListConfig().url_test;
