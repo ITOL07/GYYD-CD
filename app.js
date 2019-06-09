@@ -40,6 +40,7 @@ App({
     clubIncomeData:null,
     openid:null,
     user_id:null,
-    systemInfo:null
+    systemInfo:null,
+    phoneNo:null
   }
 })

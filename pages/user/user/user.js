@@ -87,7 +87,26 @@ Page({
     }) 
 
   },
+  getPhoneNo: function () {
+    var url_tmp = commonData.getListConfig().url_test;
+    var _this = this
+    console.log('get phoneNo')
+    wx.request({
+      url: url_tmp + '/user/qry',
+      data: {
+        mem_id: app.globalData.user_id
+      },
+      success(res) {
+        console.log('phoneno info'+res.data.userName)
+        app.globalData.phoneNo = res.data.userName
+        _this.setData({
+          tel: res.data.userName
+        })
+      }
+    })
+  },
   onLoad:function(){
+    this.getPhoneNo();
     this.show();
   },
 

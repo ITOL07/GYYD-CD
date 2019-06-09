@@ -3,7 +3,7 @@
 	<view wx:if="{{status==1}}">
 		<view class="top text2">
 			<text class="text1">1.请输入手机号</text>
-			<text>{{phoneno}}</text>
+			<!-- <text>{{phoneno}}</text> -->
 			<text>2.输入验证码</text>
 		</view>
 		<view class="middle">
@@ -35,7 +35,7 @@
 	<view class = 'success'>
 		<icon type="success" size="70"/>
 		<text class='cheer1'>
-			绑定成功
+			解绑成功
 		</text>
 		<text class='cheer'>
 			您已成功解绑手机号，期待您绑定新的手机号哦！
