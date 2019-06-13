@@ -31,7 +31,7 @@
                 <text>私</text>
               </view>
               <text>{{item.course_name}}</text>
-              <text>{{item.status_desc}}</text>
+              <text>{{item.status==0?'预约中':(item.status==1?'已签到':'已完成')}}</text>
             </view>
             <view class="list_items items_middle">
               <text>{{item.start_time_1}}-</text>
@@ -43,6 +43,29 @@
             </view>
             <view class="list_items">
               <text>教练：{{item.coach_name}}</text>
+            </view>
+          </view>
+        </block>
+        <text>已取消</text>
+        <block wx:for="{{listData2}}" wx:key="this">
+          <view class="list_item">
+            <view class="list_items items_top">
+              <view class="bac">
+                <text>私</text>
+              </view>
+              <text>{{item.courseName}}</text>
+              <text>已取消</text>
+            </view>
+            <view class="list_items items_middle">
+              <text>{{item.startTime1}}-</text>
+              <text>{{item.end_time_1}}</text>
+              <text>第{{item.seqNo}}/{{item.buy_count}}课</text>
+            </view>
+            <view class="list_items">
+              <text>学员：{{item.memName}}</text>
+            </view>
+            <view class="list_items">
+              <text>教练：{{item.coachName}}</text>
             </view>
           </view>
         </block>
