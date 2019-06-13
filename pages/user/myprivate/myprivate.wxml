@@ -17,7 +17,7 @@
         <!-- <view class="list" data-coach-id="{{item.coachId}}" bindtap="privateClick"> -->
          <view class="list" data-coach-id="{{item.coachId}}" >
           <view class="list_left">
-            <image src="../../../static/images/user/private.png"></image>
+            <image src="{{item.icon}}"></image>
           </view>
           <view class="list_right">
             <text>{{item.name}}</text>

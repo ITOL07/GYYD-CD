@@ -22,6 +22,15 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+const formatDate = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  
+
+  return [year, month, day].map(formatNumber).join('-')
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -31,8 +40,8 @@ function getListConfig() {
   var arr =
   {
     url_sc: 'http://39.106.156.239:80',
-    url_test: 'https://www.guyueyundong.com',
-    // url_test: 'http://localhost:8099'
+    // url_test: 'https://www.guyueyundong.com',
+    url_test: 'http://localhost:9099'
   }
   return arr;
 }
@@ -101,5 +110,6 @@ module.exports = {
   getListConfig: getListConfig,
   routers,
   wxlogin: wxlogin,
-	previewImg: previewImg
+	previewImg: previewImg,
+  formatDate: formatDate
 }

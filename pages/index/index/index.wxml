@@ -36,7 +36,7 @@
             <view class="list_items items_middle">
               <text>{{item.start_time_1}}-</text>
               <text>{{item.end_time_1}}</text>
-              <text>第{{item.seq_no}}/{{item.total}}课</text>
+              <text>第{{item.seq_no}}/{{item.buy_count}}课</text>
             </view>
             <view class="list_items">
               <text>学员：{{item.mem_name}}</text>

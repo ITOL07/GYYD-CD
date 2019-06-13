@@ -3,7 +3,7 @@
 const app = getApp()
 var fileData = require("../../../utils/data.js");
 var util = require("../../../utils/util.js");
-
+var date = new Date()
 Page({
   data: {
     index_dots: true,
@@ -16,7 +16,8 @@ Page({
     swiperImg: null,
     // listData: fileData.getListData(),
     listData:null,
-    date: '2019-06-01'
+    // date: '2019-06-01'
+    date: util.formatDate(date)
   },
   //事件处理函数
   bindViewTap: function() {
