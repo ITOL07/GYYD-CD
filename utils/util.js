@@ -11,6 +11,16 @@ function routers(routers, title) {
   })
 }
 
+// const formatTime = date => {
+//   const year = date.getFullYear()
+//   const month = date.getMonth() + 1
+//   const day = date.getDate()
+//   const hour = date.getHours()
+//   const minute = date.getMinutes()
+//   const second = date.getSeconds()
+
+//   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+// }
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -19,7 +29,8 @@ const formatTime = date => {
   const minute = date.getMinutes()
   const second = date.getSeconds()
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  // return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  return [year, month].map(formatNumber).join('-')
 }
 
 const formatDate = date => {
@@ -40,8 +51,8 @@ function getListConfig() {
   var arr =
   {
     url_sc: 'http://39.106.156.239:80',
-    // url_test: 'https://www.guyueyundong.com',
-    url_test: 'http://localhost:8099'
+    url_test: 'https://www.guyueyundong.com',
+    // url_test: 'http://localhost:8099'
   }
   return arr;
 }

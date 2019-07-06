@@ -19,3 +19,11 @@ text{
   font-size:26rpx;
   color:#666666;
 }
+.displayrow{
+	display: flex;
+	flex-direction: row;
+}
+.displaycolumn{
+	display: flex;
+	flex-direction: column;
+}

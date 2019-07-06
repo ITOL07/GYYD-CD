@@ -11,12 +11,13 @@ Page({
    */
   data: {
     incomeDate: fileData.getIncomeData(),
-    date: commonData.formatDate(date)
+    date: commonData.formatTime(date)
   },
 
   bindDateChange: function (e) {
+    var _this=this
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
+    _this.setData({
       date: e.detail.value
     })
     var url_tmp = commonData.getListConfig().url_test;
@@ -25,7 +26,7 @@ Page({
       url: url_tmp + '/club/qryLessReg',
       data: {
         club_id: app.globalData.user_id,
-        reg_date: e.detail.value,
+        reg_date: e.detail.value
         // status: 1
       },
       success(res) {
@@ -33,7 +34,21 @@ Page({
         _this.setData({
           clubIncomeData: res.data
         })
-
+      }
+    }) 
+    //获取授课总收
+    var that = this
+    wx.request({
+      url: url_tmp + '/club/qrySum',
+      data: {
+        club_id: app.globalData.user_id,
+        reg_date: commonData.formatDate(date)
+      },
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          clubIncomeSum: res.data
+        })
       }
     }) 
   },
@@ -48,6 +63,7 @@ Page({
   onLoad: function (options) {
     var url_tmp = commonData.getListConfig().url_test;
     var _this = this;
+    console.log("onload this")
     //获取授课总收
     wx.request({
       url: url_tmp + '/club/qryLessReg',
@@ -60,13 +76,25 @@ Page({
         console.log(res.data)
         _this.setData({
           clubIncomeData:res.data
-        })
-        
+        })     
       }
     }) 
-    _this.setData({
-      clubIncomeSum: app.globalData.clubIncomeData
-    })
+    //获取授课总收
+
+    wx.request({
+      url: url_tmp + '/club/qrySum',
+      data: {
+        club_id: app.globalData.user_id,
+        reg_date: commonData.formatDate(date)
+      },
+      success(res) {
+        console.log(res.data)
+        // app.globalData.clubIncomeData=res.data
+        _this.setData({
+          clubIncomeSum: res.data
+        })
+      }
+    }) 
   },
 
   /**

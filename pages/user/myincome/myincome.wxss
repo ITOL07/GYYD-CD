@@ -149,3 +149,47 @@ button{
   color:#F85F58 !important;
   padding-top:3%;
 }
+.card{
+	width: 94%;
+	height: 160rpx;
+	background-color: #FFFFFF;
+	margin: 20rpx auto;
+	padding: 3%;
+}
+.first{
+	width: 100%;
+	margin-bottom: 18rpx;
+}
+.timetext{
+	font-size: 30rpx;
+	color: #333333;
+}
+.money2{
+	text-align: right;
+}
+.money{
+	font-size: 22rpx;
+	color: #F85F58;
+}
+.number{
+	font-size: 32rpx;
+	color: #F85F58;
+	font-family:PingFangSC-Medium;
+	font-weight:500;
+}
+.course{
+	width: 99%;
+	font-size: 22rpx;
+	color: #666666;
+	margin-bottom: 18rpx;
+}
+.type{
+	text-align: right;
+}
+.space{
+	width: 50%;
+}
+.field{
+	font-size: 22rpx;
+	color: #666666;
+}
