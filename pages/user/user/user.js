@@ -1,5 +1,6 @@
 // pages/user/user/user.js
 const app = getApp(); 
+const date = new Date()
 var commonData = require("../../../utils/util.js"); 
 
 Page({
@@ -8,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    date: commonData.formatDate(date)
   },
 
   /**
@@ -75,7 +76,7 @@ Page({
       url: url_tmp + '/club/qrySum',
       data:{
         club_id: app.globalData.user_id,
-        reg_date:'2019-04-19'
+        reg_date: _this.data.date
       },
       success(res) {
         console.log(res.data)

@@ -1,5 +1,6 @@
 // pages/user/myincome/myincome.js
 const app = getApp()
+const date = new Date()
 var fileData = require("../../../utils/data.js");
 var commonData = require("../../../utils/util.js");
 
@@ -10,8 +11,7 @@ Page({
    */
   data: {
     incomeDate: fileData.getIncomeData(),
-
-    date: '2019-04-14'
+    date: commonData.formatDate(date)
   },
 
   bindDateChange: function (e) {

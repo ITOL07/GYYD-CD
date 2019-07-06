@@ -10,12 +10,12 @@
           </view>
         </picker> 
       </view>
-      <text>¥{{clubIncomeSum.les_total_amt}}</text>
+      <text>¥{{clubIncomeSum.kt_sum}}</text>
       <text>授课 193 节</text>
       <view class="top_items2"> 
         <view class="items_left">
           <text>可提现余额（元）</text>
-          <text>{{clubIncomeSum.les_total_amt}}</text>
+          <text>{{clubIncomeSum.kt_sum}}</text>
         </view>
         <view class="items_right">
           <button bindtap="cashClick">提现</button>

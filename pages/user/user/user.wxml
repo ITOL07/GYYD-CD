@@ -28,7 +28,7 @@
       </view>
       <view class="middle_items items_middle">
         <text>授课收入(元)</text>
-        <text>¥ {{clubIncomeData.les_total_amt}}</text>
+        <text>¥ {{clubIncomeData.kt_sum}}</text>
       </view>
     </view>
     <!-- 底部 -->
