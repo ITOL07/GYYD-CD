@@ -9,8 +9,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    incomeDate: fileData.getIncomeData(),
-
+		clubIncomeData: fileData.getIncomeData(),
+		clubIncomeSum: {
+			les_total_amt: '120,000.00'
+		},
     date: '2019-04-14'
   },
 
@@ -31,7 +33,7 @@ Page({
       success(res) {
         console.log(res.data)
         _this.setData({
-          clubIncomeData: res.data
+          // clubIncomeData: res.data
         })
 
       }
@@ -59,13 +61,13 @@ Page({
       success(res) {
         console.log(res.data)
         _this.setData({
-          clubIncomeData:res.data
+          // clubIncomeData:res.data
         })
         
       }
     }) 
     _this.setData({
-      clubIncomeSum: app.globalData.clubIncomeData
+      // clubIncomeSum: app.globalData.clubIncomeData
     })
   },
 

@@ -109,38 +109,43 @@ function getIncomeData() {
   var arr = [
     {
       id: '0',
-      name: '月亮',
-      date: '2018/11/11 16:00',
-      course: '减脂塑形',
-      price: '¥220'
+			mem_name: '月亮',
+			reg_date: '2018/11/11 16:00',
+			course_name: '减脂塑形',
+			les_count: 9,
+			les_price: '¥220'
     },
     {
       id: '1',
-      name: '月亮',
-      date: '2018/11/11 16:00',
-      course: '减脂塑形',
-      price: '¥220'
+			mem_name: '月亮',
+			reg_date: '2018/11/11 16:00',
+			course_name: '减脂塑形',
+			les_count: 9,
+			les_price: '¥220'
     },
     {
       id: '2',
-      name: '月亮',
-      date: '2018/11/11 16:00',
-      course: '减脂塑形',
-      price: '¥220'
+			mem_name: '月亮',
+			reg_date: '2018/11/11 16:00',
+			course_name: '减脂塑形',
+			les_count: 9,
+			les_price: '¥220'
     },
     {
       id: '3',
-      name: '月亮',
-      date: '2018/11/11 16:00',
-      course: '减脂塑形',
-      price: '¥220'
+			mem_name: '月亮',
+			reg_date: '2018/11/11 16:00',
+			course_name: '减脂塑形',
+			les_count: 9,
+			les_price: '¥220'
     },
     {
       id: '4',
-      name: '月亮',
-      date: '2018/11/11 16:00',
-      course: '减脂塑形',
-      price: '¥220'
+			mem_name: '月亮',
+			reg_date: '2018/11/11 16:00',
+			course_name: '减脂塑形',
+			les_count: 9,
+			les_price: '¥220'
     }
   ]
   return arr;
@@ -323,9 +328,20 @@ function getVipData() {
   return arr;
 }
 
+function getStoreData() {
+	var store = {
+		icon: '../../../static/images/user/storeImg.png',
+		name: '腾讯重创空间店',
+		address: '北京市昌平区回龙观东大街338号腾讯众创空间B座349',
+		tel: '010 - 88888888'
+	}
+	return store
+}
+
 module.exports = {
   getSwiperImgData: getSwiperImgData,
   getListData: getListData,
+	getStoreData: getStoreData,
   getStoreImgData: getStoreImgData,
   getIncomeData: getIncomeData,
   getCashData: getCashData,

@@ -10,8 +10,10 @@
           </view>
         </picker> 
       </view>
-      <text>¥{{clubIncomeSum.les_total_amt}}</text>
-      <text>授课 193 节</text>
+			<view class="middle">
+				<text>¥{{clubIncomeSum.les_total_amt}}</text>
+				<text>授课 193 节</text>
+			</view>
       <view class="top_items2"> 
         <view class="items_left">
           <text>可提现余额（元）</text>

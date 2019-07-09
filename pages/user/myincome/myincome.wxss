@@ -2,30 +2,25 @@
 .top{
   width:95%;
   height:377rpx;
-  margin:0 auto;
+  margin: 20rpx 2.5% 0;
+	padding: 0;
   background-image:url('https://appsjk-1258453917.cos.ap-beijing.myqcloud.com/temp/background.png');
-  border-radius:50rpx;
-  margin-top:20rpx;
+	background-size: 100% 100%;
+	-moz-background-size:100% 100%;
   display:flex;
   flex-direction:column;
+	justify-content: space-between;
 }
 .top text{
   color:#FFFFFF;
 }
 .top_items1{
   width:90%;
-  height:30%;
+  height: 25%;
+  margin: 0 5%;
   display:flex;
   flex-direction:row;
   align-items:center;
-  margin-left:7%;
-}
-
-.top_items1 .picker{
-  width:40%;
-  height:100%;
-  display:flex;
-  align-items: center;
 }
 .top_items1 .date_list{
   width:110%;
@@ -42,20 +37,33 @@
 }
 
 .top_items1 image{
-  display:block;
-  width:20rpx;
-  height:20rpx;
+  width:23rpx;
+  height:11rpx;
   margin-left:3%;
+}
+.middle{
+	width: 90%;
+	height: 30%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+}
+.middle text:nth-child(1){
+	font-size: 48rpx;
+}
+.middle text:nth-child(2){
+	font-size: 24rpx;
 }
 .top_items2{
   width:90%;
-  height:30%;
+  height:36%;
   display:flex;
   flex-direction:row;
   align-items:center;
   justify-content:space-between;
-  margin-left:7%;
-  margin-top:5%;
+  margin: 0 5%;
   border-top:3rpx solid #FFFFFF;
 }
 .top_items2 text{
@@ -74,25 +82,33 @@
   margin-left:7%;
 }
 .items_left{
+	width: 50%;
+	height: 100%;
   display:flex;
   flex-direction:column;
+	justify-content: space-around;
+}
+.item_left text:nth-child(1){
+	font-size: 22rpx;
+}
+.item_left text:nth-child(2){
+	font-size: 36rpx;
 }
 button{
   width:110rpx;
   height:50rpx;
   border-radius:30rpx;
-  font-size:20rpx;
+  font-size:22rpx;
   text-align:center;
   line-height:50rpx;
-  border:2rpx solid #FFFFFF;
+  border:2rpx solid rgba(255, 255, 255, 0.5);
   background:#EE6F2D;
   color:#FFFFFF;
 }
 
 .bottom{
-  width:90%;
-  height:auto;
-  margin:30rpx auto;
+  width:95%;
+  margin: 0 2.5%;
 }
 .bottom text{
   font-size:30rpx;
