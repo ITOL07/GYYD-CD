@@ -9,10 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-		clubIncomeData: fileData.getIncomeData(),
-		clubIncomeSum: {
-			les_total_amt: '120,000.00'
-		},
+		clubIncomeData: null,
+		clubIncomeSum: {},
     date: '2019-04-14'
   },
 

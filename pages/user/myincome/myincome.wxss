@@ -12,11 +12,12 @@
 	justify-content: space-between;
 }
 .top text{
+	font-size: 24rpx;
   color:#FFFFFF;
 }
 .top_items1{
   width:90%;
-  height: 25%;
+  height: 90rpx;
   margin: 0 5%;
   display:flex;
   flex-direction:row;
@@ -42,12 +43,13 @@
   margin-left:3%;
 }
 .middle{
-	width: 90%;
+	width: 100%;
 	height: 30%;
 	text-align: center;
+	margin-bottom: 30rpx;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 }
 .middle text:nth-child(1){
@@ -58,7 +60,7 @@
 }
 .top_items2{
   width:90%;
-  height:36%;
+  height: 130rpx;
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -83,15 +85,15 @@
 }
 .items_left{
 	width: 50%;
-	height: 100%;
+	height: 70%;
   display:flex;
   flex-direction:column;
 	justify-content: space-around;
 }
-.item_left text:nth-child(1){
+.top_items2 .item_left text:nth-child(1){
 	font-size: 22rpx;
 }
-.item_left text:nth-child(2){
+.top_items2 .item_left text:nth-child(2){
 	font-size: 36rpx;
 }
 button{
@@ -109,10 +111,6 @@ button{
 .bottom{
   width:95%;
   margin: 0 2.5%;
-}
-.bottom text{
-  font-size:30rpx;
-  color:#333333;
 }
 .list{
   width:100%;
@@ -136,32 +134,52 @@ button{
   justify-content:center;
 } 
 .list_items_left .lists{
-  width:120rpx;
+  width: 20%;
   height:120rpx;
   border-radius:50%;
   background:#EE6F2D;
 }
 .list_items_middle{
-  width:60%;
-  height:100%;
+  width: 75%;
+  height: 70%;
+	line-height: 40rpx;
   display:flex;
   flex-direction:column;
-  align-items:center;
-  margin-left:5%;
+	justify-content: space-around;
 }
 .list_items_middle text{
-  width:100%;
-  height:33%;
   color:#666666;
   font-size:22rpx;
-  line-height:63rpx;
 }
-.list_items_middle text:nth-child(1){
+.first{
+	width: 100%;
+	height: 40rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.list_items_middle .first text:nth-child(1){
   font-size:30rpx;
   color:#333333;
 }
-.list_items>text{
-  font-size:22rpx !important;
-  color:#F85F58 !important;
-  padding-top:3%;
+.list_items_middle .first text:nth-child(2){
+  font-size:30rpx;
+  color: #F85F58;
+}
+.list_items text{
+  font-size: 22rpx;
+	color: #666666;
+}
+.list_items_middle .last{
+	width: 100%;
+	height: 40rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.list_items_middle .last text{
+	font-size: 22rpx;
+	color: #666666; 
 }

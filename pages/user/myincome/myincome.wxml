@@ -31,12 +31,16 @@
           <view class="list_items">
             <view class="list_items_left"><view class="lists"></view></view>
             <view class="list_items_middle">
-              <text>{{item.mem_name}}</text>
-              <text>{{item.reg_date}}</text>
-              <text>{{item.course_name}}</text>
-              <text>课时数：{{item.les_count}}</text>
-            </view>
-            <text>单价：{{item.les_price}}</text>
+              <view class="first">
+								<text>{{item.mem_name}}</text>
+	            	<text>单价：{{item.les_price}}</text>
+							</view>
+	            <text>{{item.reg_date}}</text>
+              <view class="last">
+								<text>{{item.course_name}}</text>
+              	<text>课时数：{{item.les_count}}</text>
+							</view>
+						</view>
           </view>
         </block>
       </view>
