@@ -3,28 +3,27 @@
   background:#FFFFFF;
 }
 .top{
-  width: 100%;
-  height: 228rpx;
+  width: 94%;
+  height: 250rpx;
+	margin: 0 3%;
   display: flex;
   flex-direction: row;
-  padding-top:20rpx; 
+  /* padding-top:20rpx;  */
   align-items:center;
 }
 .top .header_left{
-  width:25%;
+  width:27%;
   height:80%;
-  margin-left:5%;
   display:flex;
   align-items:center;
 }
 .top .header_left image{
-  display:block;
   width:150rpx;
   height:150rpx;
 }
 .top .header_right{
-  width:65%;
-  height:80%;
+  width: 73%;
+  height: 75%;
   display:flex;
   flex-direction:column;
 }
@@ -62,51 +61,45 @@
 }
 /* middle */
 .middle{
-  width:95%;
-  height:275rpx;
-  margin:0 auto;
+  width:97%;
+  height: 295rpx;
+  margin: 20rpx 1.5% 0;
   background-image:url('https://appsjk-1258453917.cos.ap-beijing.myqcloud.com/temp/background.png');
-  border-radius:50rpx;
-  margin-top:20rpx;
+	background-size:100% 100%;
+  -moz-background-size:100% 100%;
 }
 .middle_items{
-  width:100%;
+  width: 90%;
+	padding: 0 5%;
   display:flex;
   flex-direction:row;
   align-items:center;
-  line-height:137rpx;
 }
 .items_top{
-  height:40%;
+  height: 30%;
+  line-height:100rpx;
+	justify-content: space-between;
 }
 .items_middle{
-  height:60%;
+  height: 55%;
+  line-height: 160rpx;
 }
 .items_top text:nth-child(1){
-  width:70%;
-  height:100%;
   font-size:30rpx;
   color:#FFFFFF;
-  margin-left:10%;
 }
 .items_top text:nth-child(2){
-  width:20%;
-  height:100%;
   font-size:22rpx;
   color:#FFFFFF;
 }
 .items_middle text:nth-child(1){
-  width:40%;
-  height:100%;
   font-size:26rpx;
   color:#FFFFFF;
-  margin-left:10%;
 }
 .items_middle text:nth-child(2){
-  width:60%;
-  height:100%;
   font-size:60rpx;
   color:#FFFFFF;
+	margin-left: 80rpx;
 }
 /* 底部 */
 .bottom{
@@ -115,23 +108,20 @@
   margin-top:30rpx;
 }
 .list_item{
+	width: 94%;
+	height: 88rpx;
+  padding: 0 3%;
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  padding-top:10rpx;
   border-bottom:1rpx solid #EEEEEE;
   align-items:center;
 }
 .list_item text{
-  width:70%;
-  height:70rpx;
-  line-height:70rpx;
   font-size:28rpx;
   color:#333333;
-  margin-left:5%;
 }
 .list_item image{
   width:20rpx;
   height:20rpx;
-  margin-right:5%;
 }
