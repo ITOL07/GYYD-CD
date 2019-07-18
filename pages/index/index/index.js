@@ -14,8 +14,8 @@ Page({
     circular: true,
 
     swiperImg: null,
-    // listData: fileData.getListData(),
-    listData:null,
+    listData: fileData.getListData(),
+    // listData:null,
     // date: '2019-06-01'
     date: util.formatDate(date)
   },
@@ -65,7 +65,7 @@ Page({
           }
         }
         _this.setData({
-          listData: tmp
+          // listData: tmp
         })
       
       }
