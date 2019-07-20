@@ -3,19 +3,21 @@
   <scroll-view scroll-y="true" class="scroll_body">
     <view class="top">
       <view class="top_items1">
-        <picker mode="date" value="{{date}}" start="2019-06-01" end="2029-09-01" bindchange="bindDateChange" fields="month" class="picker">
+        <picker mode="date" value="{{date}}" start="2019-04-01" end="2029-09-01" bindchange="bindDateChange" class="picker">
           <view class="date_list">
             <text class="list_date">{{date}}</text>
             <image src="../../../static/images/littleicon/sanjiao.png"></image>
           </view>
         </picker> 
       </view>
-      <text>¥{{clubIncomeSum.kt_sum}}</text>
-      <text>授课 {{clubIncomeData.length}} 节</text>
+			<view class="middle">
+				<text>¥{{clubIncomeSum.les_total_amt}}</text>
+				<text>授课 193 节</text>
+			</view>
       <view class="top_items2"> 
         <view class="items_left">
           <text>可提现余额（元）</text>
-          <text>{{clubIncomeSum.kt_sum}}</text>
+          <text>{{clubIncomeSum.les_total_amt}}</text>
         </view>
         <view class="items_right">
           <button bindtap="cashClick">提现</button>
@@ -24,35 +26,24 @@
     </view>
     <view class="bottom">
       <text>课程收入明细</text>
-      <!-- <view class="list">
+      <view class="list">
         <block wx:for="{{clubIncomeData}}" wx:key="this">
           <view class="list_items">
-            <view class="list_items_left"></view>
+            <view class="list_items_left"><view class="lists"></view></view>
             <view class="list_items_middle">
-              <text>学员：{{item.mem_name}}</text>
-              <text>时间：{{item.datex}} {{item.timex}}</text>
-              <text>课程：{{item.course_name}}</text>
-              <text>教练：{{item.coach_name}}</text>
-            </view>
-            <text>单价：{{item.price}}</text>
+              <view class="first">
+								<text>{{item.mem_name}}</text>
+	            	<text>单价：{{item.les_price}}</text>
+							</view>
+	            <text>{{item.reg_date}}</text>
+              <view class="last">
+								<text>{{item.course_name}}</text>
+              	<text>课时数：{{item.les_count}}</text>
+							</view>
+						</view>
           </view>
         </block>
-      </view> -->
-      <view wx:for="{{clubIncomeData}}" wx:key="this" class="displaycolumn card">
-			<view class="first displayrow">
-				<view class="timetext space">{{item.datex}}</view>
-        <view class="timetext space">{{item.timex}}</view>
-				<view class="space money2">
-					<text class="money">￥</text>
-					<text class="number">{{item.price}}</text>
-				</view>
-			</view>
-			<view class="course displayrow">
-				<view class="space">课程：{{item.course_name}}   会员：{{item.mem_name}}</view>
-				<view class="type space">{{item.type}}原价</view>
-			</view>
-			<view class="field">教练：{{item.coach_name}}</view>
-		</view>
+      </view>
     </view>
   </scroll-view>
 </view>

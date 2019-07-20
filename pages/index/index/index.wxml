@@ -28,9 +28,9 @@
           <view class="list_item">
             <view class="list_items items_top">
               <view class="bac">
-                <text>私</text>
+                <view>私</view>
+              	<text>{{item.course_name}}</text>
               </view>
-              <text>{{item.course_name}}</text>
               <text>{{item.status==0?'预约中':(item.status==1?'已签到':'已完成')}}</text>
             </view>
             <view class="list_items items_middle">
