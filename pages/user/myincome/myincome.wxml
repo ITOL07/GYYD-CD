@@ -12,7 +12,7 @@
       </view>
 			<view class="middle">
 				<text>¥{{clubIncomeSum.les_total_amt}}</text>
-				<text>授课 193 节</text>
+				<text>授课 {{clubIncomeData.length}}节</text>
 			</view>
       <view class="top_items2"> 
         <view class="items_left">

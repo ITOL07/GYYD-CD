@@ -31,7 +31,7 @@ Page({
 			success(res) {
 				console.log(res.data)
 				_this.setData({
-					// clubIncomeData: res.data
+					clubIncomeData: res.data
 				})
 
 			}
@@ -59,13 +59,13 @@ Page({
 			success(res) {
 				console.log(res.data)
 				_this.setData({
-					// clubIncomeData:res.data
+					clubIncomeData:res.data
 				})
 
 			}
 		})
 		_this.setData({
-			// clubIncomeSum: app.globalData.clubIncomeData
+			clubIncomeSum: app.globalData.clubIncomeData
 		})
 	},
 

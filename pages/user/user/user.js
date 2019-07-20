@@ -80,7 +80,7 @@ Page({
       },
       success(res) {
         console.log(res.data)
-        // app.globalData.clubIncomeData=res.data
+        app.globalData.clubIncomeData=res.data
         _this.setData({
           clubIncomeData: res.data
         })
