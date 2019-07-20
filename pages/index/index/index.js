@@ -104,5 +104,9 @@ Page({
         })
       }
     }) 
+  },
+  onShow:function(){
+    this.getBanner();
+    this.getClubLess();
   }
 })

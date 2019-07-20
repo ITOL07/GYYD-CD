@@ -24,7 +24,8 @@
     <view class="middle" bindtap="myincomeClick">
       <view class="middle_items items_top">
         <text>当月收入</text>
-        <text catchtap="incomedetailClick">收入明细></text>
+        <!-- <text catchtap="incomedetailClick">收入明细></text> -->
+        <text>收入明细></text>
       </view>
       <view class="middle_items items_middle">
         <text>授课收入(元)</text>

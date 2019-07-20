@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    messageData: fileData.getMessageData()
+    // messageData: fileData.getMessageData()
+    messageData:null
   },
 
   /**
