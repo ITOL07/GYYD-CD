@@ -3,7 +3,7 @@
   <scroll-view scroll-y="true" class="scroll_body">
     <view class="top">
       <view class="top_items1">
-        <picker mode="date" value="{{date}}" start="2019-04-01" end="2029-09-01" bindchange="bindDateChange" class="picker">
+        <picker mode="date" value="{{date}}" start="2019-07-01" end="2029-09-01" bindchange="bindDateChange" class="picker">
           <view class="date_list">
             <text class="list_date">{{date}}</text>
             <image src="../../../static/images/littleicon/sanjiao.png"></image>
@@ -11,13 +11,13 @@
         </picker> 
       </view>
 			<view class="middle">
-				<text>¥{{clubIncomeSum.les_total_amt}}</text>
-				<text>授课 {{clubIncomeData.length}}节</text>
+				<text>¥{{clubIncomeSum.kt_sum}}</text> 
+        <text>授课 {{clubIncomeData.length}} 节</text> 
 			</view>
       <view class="top_items2"> 
         <view class="items_left">
           <text>可提现余额（元）</text>
-          <text>{{clubIncomeSum.les_total_amt}}</text>
+          <text>{{clubIncomeSum.kt_sum}}</text> 
         </view>
         <view class="items_right">
           <button bindtap="cashClick">提现</button>
@@ -29,16 +29,16 @@
       <view class="list">
         <block wx:for="{{clubIncomeData}}" wx:key="this">
           <view class="list_items">
-            <view class="list_items_left"><view class="lists"></view></view>
+            <view class="list_items_left"><image class="lists" src="{{item.mem_icon}}"></image></view>
             <view class="list_items_middle">
               <view class="first">
-								<text>{{item.mem_name}}</text>
-	            	<text>单价：{{item.les_price}}</text>
+								<text>会员：{{item.mem_name}}</text>
+	            	<text>单价：{{item.price}}</text>
 							</view>
-	            <text>{{item.reg_date}}</text>
+	            <text>时间：{{item.datex}} {{item.timex}}</text>
               <view class="last">
-								<text>{{item.course_name}}</text>
-              	<text>课时数：{{item.les_count}}</text>
+								<text>课程名称：{{item.course_name}}</text>
+              	<text>课时数：{{item.seq_no}}/{{item.buy_count}}</text>
 							</view>
 						</view>
           </view>

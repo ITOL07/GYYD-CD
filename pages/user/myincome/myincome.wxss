@@ -134,14 +134,14 @@ button{
   justify-content:center;
 } 
 .list_items_left .lists{
-  width: 20%;
+  width: 60%;
   height:120rpx;
   border-radius:50%;
   background:#EE6F2D;
 }
 .list_items_middle{
   width: 75%;
-  height: 70%;
+  height: 100%;
 	line-height: 40rpx;
   display:flex;
   flex-direction:column;
