@@ -119,10 +119,12 @@ button{
   flex-direction:column;
 }
 .list_items{
-  width:100%;
+  width: 94%;
   height:188rpx;
+	padding: 3%;
   display:flex;
   flex-direction:row;
+	align-items: center;
   margin-top:20rpx;
   background:#FFFFFF;
 }
@@ -134,15 +136,16 @@ button{
   justify-content:center;
 } 
 .list_items_left .lists{
-  width: 60%;
+  width: 120rpx;
   height:120rpx;
   border-radius:50%;
   background:#EE6F2D;
 }
 .list_items_middle{
   width: 75%;
-  height: 100%;
+  height: 150rpx;
 	line-height: 40rpx;
+	margin-left: 3%;
   display:flex;
   flex-direction:column;
 	justify-content: space-around;
