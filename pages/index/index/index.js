@@ -33,8 +33,8 @@ Page({
     this.getClubLess();
   },
   onLoad: function () {
-    this.getClubLess();
     this.getBanner();
+    this.getClubLess();
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -63,6 +63,7 @@ Page({
     var _this = this
     var url_tmp = util.getListConfig().url_test;
     console.log('user_id====' + app.globalData.user_id)
+    console.log('util.formatDate(date)====' + util.formatDate(date))
     wx.request({
       url: url_tmp + '/club/qryLesson',
       data: {
@@ -123,7 +124,7 @@ Page({
     }) 
   },
   onShow:function(){
-    this.getBanner();
+    // this.getBanner();
     this.getClubLess();
   }
 })

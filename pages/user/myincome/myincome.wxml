@@ -27,8 +27,8 @@
     <view class="bottom">
       <text>课程收入明细</text>
       <view class="list">
-        <block wx:for="{{incomeDate}}" wx:key="this">
-        <!-- <block wx:for="{{clubIncomeData}}" wx:key="this"> -->
+        <!-- <block wx:for="{{incomeDate}}" wx:key="this"> -->
+        <block wx:for="{{clubIncomeData}}" wx:key="this">
           <view class="list_items">
             <view class="list_items_left"><image class="lists" src="{{item.mem_icon}}"></image></view>
             <view class="list_items_middle">
