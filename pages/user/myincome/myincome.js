@@ -37,11 +37,12 @@ Page({
     })
     //获取授课总收 
     var that = this
+    console.log("get sum++" + e.detail.value)
     wx.request({
       url: url_tmp + '/club/qrySum',
       data: {
         club_id: app.globalData.user_id,
-        reg_date: commonData.formatDate(date)
+        reg_date: e.detail.value+'-01'
       },
       success(res) {
         console.log(res.data)
