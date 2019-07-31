@@ -3,7 +3,7 @@
   <scroll-view scroll-y="true" class="scroll_body">
     <view class="top">
       <view class="top_items1">
-        <picker mode="date" value="{{date}}" start="2019-07-01" end="2029-09-01" bindchange="bindDateChange" class="picker">
+        <picker mode="date" value="{{date}}" start="2019-05-01" end="2029-09-01" fields="month" bindchange="bindDateChange" class="picker">
           <view class="date_list">
             <text class="list_date">{{date}}</text>
             <image src="../../../static/images/littleicon/sanjiao.png"></image>
