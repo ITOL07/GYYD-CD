@@ -139,32 +139,31 @@ Page({
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (app.userInfoReadyCallback) {
-                app.userInfoReadyCallback(res)
+                console.log('网络延时')
+                commonData.wxlogin()
               }
             }
           })
         }
+        else{
+          wx.setStorageSync('logFlag', false)
+        }
       }
     })
-    _this.setData({
-      logflag: true
-    })
-    if (app.globalData.userInfo && _this.data.logflag) {
-      commonData.wxlogin();
-    }
+    
 
-    // 给app.js 定义一个方法。
-    app.userInfoReadyCallback = res => {
-      console.log('userInfoReadyCallback: ', res);
-      console.log('获取用户信息成功');
-      _this.setData({
-        logflag:true
-      })
-      if (_this.data.logflag) {
-        commonData.wxlogin();
-      }
+    // // 给app.js 定义一个方法。
+    // app.userInfoReadyCallback = res => {
+    //   console.log('userInfoReadyCallback: ', res);
+    //   console.log('获取用户信息成功');
+    //   _this.setData({
+    //     logflag:true
+    //   })
+    //   if (_this.data.logflag) {
+    //     commonData.wxlogin();
+    //   }
 
-    };
+    // };
     
   },
   getPhoneNumber: function (e) {
@@ -202,17 +201,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _this=this
-    if (app.globalData.userInfo && _this.data.logflag) {
-      _this.wxlogin()
+    // var _this=this
+    // if (app.globalData.userInfo && _this.data.logflag) {
+    //   _this.wxlogin()
+    // }
+
+    // // 给app.js 定义一个方法。
+    // app.userInfoReadyCallback = res => {
+    //   console.log('userInfoReadyCallback: ', res);
+    //   console.log('获取用户信息成功');
+    //   if (_this.data.logflag) {
+    //     _this.wxlogin()
+    //   }
+
+    // };
+    console.log('logflag======' + this.data.logflag)
+
+    if (app.globalData.userInfo && this.data.logflag) {
+      commonData.wxlogin()
     }
 
     // 给app.js 定义一个方法。
     app.userInfoReadyCallback = res => {
       console.log('userInfoReadyCallback: ', res);
       console.log('获取用户信息成功');
-      if (_this.data.logflag) {
-        _this.wxlogin()
+      if (this.data.logflag) {
+        commonData.wxlogin()
       }
 
     };

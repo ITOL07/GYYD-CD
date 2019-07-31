@@ -86,24 +86,40 @@ Page({
           listData: list
         })
       
-      }
-    })
-    //已取消
-    wx.request({
-      url: url_tmp + '/member/qryCancelLesson',
-      data: {
-        mem_id: '',
-        coach_id: '',
-        club_id: app.globalData.user_id,
-        reg_date: _this.data.date
-      },
-      success(res) {
-        console.log(res.data)
-        _this.setData({
-          listData2: res.data
+        wx.request({
+          url: url_tmp + '/member/qryCancelLesson',
+          data: {
+            mem_id: '',
+            coach_id: '',
+            club_id: app.globalData.user_id,
+            reg_date: _this.data.date
+          },
+          success(res) {
+            console.log(res.data)
+            _this.setData({
+              listData2: res.data
+            })
+          }
         })
       }
     })
+    //已取消
+    
+    // wx.request({
+    //   url: url_tmp + '/member/qryCancelLesson',
+    //   data: {
+    //     mem_id: '',
+    //     coach_id: '',
+    //     club_id: app.globalData.user_id,
+    //     reg_date: _this.data.date
+    //   },
+    //   success(res) {
+    //     console.log(res.data)
+    //     _this.setData({
+    //       listData2: res.data
+    //     })
+    //   }
+    // })
   },
   getBanner:function(){
     var _this = this
@@ -126,5 +142,10 @@ Page({
   onShow:function(){
     // this.getBanner();
     this.getClubLess();
-  }
+    
+  },
+  onReady: function () {
+    this.getClubLess();
+  },
+  
 })
