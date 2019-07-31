@@ -115,6 +115,13 @@ function previewImg(e, imgs) {
 		complete: function (res) { },
 	})
 }
+function sleep(delay) {
+  var start = (new Date()).getTime();
+  while ((new Date()).getTime() - start < delay) {
+    continue;
+  }
+}
+
 
 module.exports = {
   formatTime: formatTime,
@@ -122,5 +129,6 @@ module.exports = {
   routers,
   wxlogin: wxlogin,
 	previewImg: previewImg,
-  formatDate: formatDate
+  formatDate: formatDate,
+  sleep: sleep
 }

@@ -32,10 +32,7 @@ Page({
     })
     this.getClubLess();
   },
-  onLoad: function () {
-    this.getBanner();
-    this.getClubLess();
-  },
+  
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -144,8 +141,29 @@ Page({
     this.getClubLess();
     
   },
+  onLoad: function () {
+
+    this.getBanner();
+    // util.sleep(1500)
+    // while (true) {
+      var _this = this
+      
+        
+    var n = setInterval(function(){
+          if (app.globalData.user_id == null) {
+          console.log("wait for userid");
+          } else {
+            clearInterval(n);
+            _this.getClubLess()
+          }
+          }, 500);
+        // continue
+      
+    // }
+
+  },
   onReady: function () {
-    this.getClubLess();
+    // this.getClubLess();
   },
   
 })
